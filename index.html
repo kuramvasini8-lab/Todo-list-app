@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List — Stay Organized</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <main class="container">
+    
+    <header class="header">
+      <h1>✨ My Todo List</h1>
+      <p id="date"></p>
+      <p id="counter" class="counter">0 tasks remaining</p>
+    </header>
+
+    <section class="card">
+
+      <form id="form" class="form">
+        <input 
+          id="input" 
+          type="text" 
+          placeholder="What needs to be done?" 
+          autocomplete="off"
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="list" class="list"></ul>
+
+      <p id="empty" class="empty">No tasks yet. Add one above.</p>
+
+      <div id="footer" class="footer hidden">
+        <button id="clear" class="ghost">Clear Completed</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
